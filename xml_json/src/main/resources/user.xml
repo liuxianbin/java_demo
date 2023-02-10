@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<users>
+    <user id="1001">
+        <username>java</username>
+        <age>20</age>
+    </user>
+    <user id="1002">
+        <username>golang</username>
+        <age>30</age>
+    </user>
+</users>
