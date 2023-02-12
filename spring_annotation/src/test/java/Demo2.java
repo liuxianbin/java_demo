@@ -32,7 +32,7 @@ public class Demo2 {
 
     @Test
     public void test2() {
-        int num = jdbcTemplate.update("update users set create_time=? where id=1", LocalDateTime.now());
+        int num = jdbcTemplate.update("update m_user set create_time=? where id=1", LocalDateTime.now());
         System.out.println(num);
     }
 
