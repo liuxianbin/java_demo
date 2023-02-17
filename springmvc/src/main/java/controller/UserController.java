@@ -1,18 +1,22 @@
 package controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import pojo.User;
 
-@Controller("/user")
+@Controller
 public class UserController {
-    @ResponseBody
     @RequestMapping("/demo")
-    public User demo() {
-        User u = new User();
-        u.setUsername("java");
-        u.setAge(100);
+    public String demo() {
+        return "demo";
+    }
+
+    @RequestMapping("/json")
+    @ResponseBody
+    public User json(User u) {
+        System.out.println(u);
         return u;
     }
 }

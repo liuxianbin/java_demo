@@ -7,7 +7,8 @@ import org.springframework.web.servlet.support.AbstractDispatcherServletInitiali
 
 import javax.servlet.Filter;
 
-// AbstractDispatcherServletInitializer: 快速初始化Web3.0容器
+// 在Servlet3.0环境中，容器会在类路径中查找实现ServletContainerInitializer接口的类，如果找到的话就用它来配置Servlet容器
+// Spring提供了ServletContainerInitializer接口的实现SpringServletContainerInitializer，这个类反过来又查找实现WebApplicationInitializer的类，并将配置的任务交给它来执行
 // 使用AbstractAnnotationConfigDispatcherServletInitializer可以简化相同的操作
 public class DispatcherServletInit extends AbstractDispatcherServletInitializer {
     @Override
