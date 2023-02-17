@@ -22,6 +22,9 @@ public class CityServiceImpl implements CityService {
     @Override
     public boolean update(City city) {
         cityDao.update(city);
+        if (city.getId() == 1) {
+            throw new RuntimeException("mock exception...");
+        }
         return true;
     }
 

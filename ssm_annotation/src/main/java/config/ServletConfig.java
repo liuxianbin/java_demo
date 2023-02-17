@@ -1,6 +1,9 @@
 package config;
 
+import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
+
+import javax.servlet.Filter;
 
 public class ServletConfig extends AbstractAnnotationConfigDispatcherServletInitializer {
     @Override
@@ -21,6 +24,16 @@ public class ServletConfig extends AbstractAnnotationConfigDispatcherServletInit
     protected String[] getServletMappings() {
         return new String[]{
                 "/"
+        };
+    }
+
+    @Override
+    protected Filter[] getServletFilters() {
+        //解决POST表单方式中文乱码
+        CharacterEncodingFilter characterEncodingFilter = new CharacterEncodingFilter();
+        characterEncodingFilter.setEncoding("UTF-8");
+        return new Filter[]{
+                characterEncodingFilter
         };
     }
 }

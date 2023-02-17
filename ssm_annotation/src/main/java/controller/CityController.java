@@ -19,7 +19,7 @@ public class CityController {
     }
 
     @PutMapping
-    public boolean update(@RequestBody City city) {
+    public boolean update(@RequestBody City city){
         return cityService.update(city);
     }
 

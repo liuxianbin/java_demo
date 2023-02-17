@@ -3,6 +3,8 @@ package config;
 import com.alibaba.druid.pool.DruidDataSource;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
+import org.springframework.jdbc.datasource.DataSourceTransactionManager;
+import org.springframework.transaction.TransactionManager;
 
 import javax.sql.DataSource;
 
@@ -24,5 +26,12 @@ public class JdbcConfig {
         dataSource.setUrl(url);
         dataSource.setDriverClassName(driver);
         return dataSource;
+    }
+
+    @Bean
+    public TransactionManager transactionManager(DataSource dataSource) {
+        DataSourceTransactionManager dataSourceTransactionManager = new DataSourceTransactionManager();
+        dataSourceTransactionManager.setDataSource(dataSource);
+        return dataSourceTransactionManager;
     }
 }

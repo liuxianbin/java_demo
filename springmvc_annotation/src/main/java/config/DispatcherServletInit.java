@@ -34,7 +34,7 @@ public class DispatcherServletInit extends AbstractDispatcherServletInitializer 
 
     @Override
     protected Filter[] getServletFilters() {
-        //解决中文乱码
+        //解决POST表单方式中文乱码
         CharacterEncodingFilter characterEncodingFilter = new CharacterEncodingFilter();
         characterEncodingFilter.setEncoding("UTF-8");
         return new Filter[]{

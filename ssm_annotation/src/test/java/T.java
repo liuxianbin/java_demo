@@ -28,9 +28,9 @@ public class T {
     public void testUpdate() {
         City c = new City();
         c.setId(1);
-        c.setCityName("xuzhou_new");
         c.setCreateTime(new Date());
         cityService.update(c);
+        System.out.println("over...");
     }
 
     @Test
