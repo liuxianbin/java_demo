@@ -24,6 +24,7 @@ my:
   # 特殊字符可以用字符串包裹起来作为字符解析
   prefix: "+86\t"
   tel: ${my.prefix}15888888888
+  timeout: 10
 
 mybatis-plus:
   type-aliases-package: com.example.pojo

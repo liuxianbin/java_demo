@@ -2,6 +2,10 @@ package com.example.setting;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.boot.convert.DurationUnit;
+
+import java.time.Duration;
+import java.time.temporal.ChronoUnit;
 
 @Data
 //@Component  //可以不使用该注解,在导入类中@EnableConfigurationProperties按需注册bean
@@ -21,4 +25,6 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 public class My {
     private String prefix;
     private String tel;
+    @DurationUnit(ChronoUnit.MINUTES)
+    private Duration timeout;
 }
