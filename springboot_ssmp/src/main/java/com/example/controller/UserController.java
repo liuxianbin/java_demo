@@ -52,6 +52,8 @@ public class UserController {
     @RequestMapping("/demo3")
     @ResponseBody
     public String demo3() {
+        // 使用@Slf4j注解
+        // 等效于 private static final org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(UserController.class)
         log.info("slf4j...");
         return "@Slf4j";
     }
