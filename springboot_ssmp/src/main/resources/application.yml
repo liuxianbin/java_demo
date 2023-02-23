@@ -1,0 +1,32 @@
+spring:
+  thymeleaf:
+    suffix: .html
+    mode: HTML
+    prefix: classpath:/templates/
+    encoding: UTF-8
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/test
+      username: root
+      password:
+  profiles:
+    active: dev
+
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    username: root
+#    password:
+#    url: jdbc:mysql://localhost:3306/test
+#    type: com.alibaba.druid.pool.DruidDataSource
+
+my:
+  # 特殊字符可以用字符串包裹起来作为字符解析
+  prefix: "+86\t"
+  tel: ${my.prefix}15888888888
+
+mybatis-plus:
+  type-aliases-package: com.example.pojo
+  mapper-locations: classpath*:/mapper/**/*.xml #默认
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
