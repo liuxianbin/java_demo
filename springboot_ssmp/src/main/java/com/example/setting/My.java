@@ -12,12 +12,12 @@ import java.time.temporal.ChronoUnit;
 //via @EnableConfigurationProperties, marked as Spring component, or scanned via @ConfigurationPropertiesScan
 @ConfigurationProperties("my")
 /*
-    导入类中使用@Import(App.class)
-        不使用@Component,bean名称为全限定名        com.example.web.setting.App
-        使用@Component,bean名称为首字母小写类名     app
+    导入类中使用@Import(My.class)
+        不使用@Component,bean名称为全限定名        com.example.setting.My
+        使用@Component,bean名称为首字母小写类名     my
 
-    导入类中使用@EnableConfigurationProperties(App.class)
-        bean名称为app-com.example.web.setting.App
+    导入类中使用@EnableConfigurationProperties(My.class)
+        bean名称为my-com.example.setting.My
 
     若导入类中同时使用@Import和@EnableConfigurationProperties，会注入2个bean
     可以仅使用@ConfigurationProperties，并在导入类中仅使用@EnableConfigurationProperties激活@ConfigurationProperties按需注入bean
