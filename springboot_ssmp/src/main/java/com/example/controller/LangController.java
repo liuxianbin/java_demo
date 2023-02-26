@@ -33,4 +33,10 @@ public class LangController {
         System.out.println(page1.getRecords());
         return "";
     }
+
+    @RequestMapping("/demo2/{id}")
+    public String demo2(@PathVariable int id) {
+        System.out.println("controller==Lang==>" + langService.getLangByCache(id));
+        return langService.getLangServiceDemo(id);
+    }
 }

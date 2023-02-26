@@ -18,6 +18,11 @@ spring:
     jedis:
       pool:
         max-active: 8
+  task:
+    scheduling:
+      thread-name-prefix: task-
+  activemq:
+    broker-url: tcp://localhost:61616
 
 #  datasource:
 #    driver-class-name: com.mysql.cj.jdbc.Driver
