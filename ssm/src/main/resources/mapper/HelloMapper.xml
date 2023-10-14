@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.HelloMapper">
+    <!-- public Charset getCharset(String name);-->
+    <select id="getCharset" resultType="charset">
+        SELECT CHARACTER_SET_NAME, DEFAULT_COLLATE_NAME FROM CHARACTER_SETS where CHARACTER_SET_NAME = #{name}
+    </select>
+</mapper>

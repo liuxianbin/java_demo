@@ -1,0 +1,17 @@
+{
+  "groups": [
+    {
+      "name": "analyse",
+      "type": "analyse.AnalyseProperties",
+      "sourceType": "analyse.AnalyseProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "analyse.title",
+      "type": "java.lang.String",
+      "sourceType": "analyse.AnalyseProperties"
+    }
+  ],
+  "hints": []
+}
