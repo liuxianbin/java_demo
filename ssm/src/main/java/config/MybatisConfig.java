@@ -15,10 +15,12 @@ public class MybatisConfig {
         return sqlSessionFactoryBean;
     }
 
+    // 可以不注册MapperScannerConfigurer，用@MapperScan注解
     @Bean
     public MapperScannerConfigurer mapperScannerConfigurer() {
         MapperScannerConfigurer mapperScannerConfigurer = new MapperScannerConfigurer();
         mapperScannerConfigurer.setBasePackage("mapper");
         return mapperScannerConfigurer;
     }
+
 }

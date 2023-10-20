@@ -12,8 +12,9 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 public class Main {
     @Autowired
     HelloMapper helloMapper;
+
     @Test
-    public void m1(){
+    public void m1() {
         Charset c = helloMapper.getCharset("utf8mb4");
         System.out.println(c);
     }
