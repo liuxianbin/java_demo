@@ -11,13 +11,11 @@ public class MyListener implements ServletContextListener {
     public void contextInitialized(ServletContextEvent sce) {
         ServletContext context = sce.getServletContext();
         System.out.println("lang: " + context.getInitParameter("lang"));
-        ServletContextListener.super.contextInitialized(sce);
         System.out.println("MyListener destroy");
     }
 
     @Override
     public void contextDestroyed(ServletContextEvent sce) {
         System.out.println("MyListener destroy");
-        ServletContextListener.super.contextDestroyed(sce);
     }
 }
