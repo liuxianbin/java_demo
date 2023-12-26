@@ -59,6 +59,7 @@ public class SecurityConfig {
                 response.getWriter().write("认证失败...");
             });
         });
+        http.cors(Customizer.withDefaults());
         http.csrf(csrf -> csrf.disable());
         return http.build();
     }
