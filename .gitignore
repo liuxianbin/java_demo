@@ -7,3 +7,4 @@ analyse-spring-boot-starter/target/
 springsecurityjwt/target/
 springsecurity/target/
 servlet/target/
+*.iml
